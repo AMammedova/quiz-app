@@ -3,6 +3,9 @@ import { Text, Flex } from "@chakra-ui/react";
 import ThemeSwitcher from "../ThemeSwitcher";
 import HtmlIcon from "@/shared/icons/HtmlIcon";
 import AccesIcon from "@/shared/icons/AccesIcon";
+import css from "styled-jsx/css";
+import CssIcon from "@/shared/icons/CssIcon";
+import JsIcon from "@/shared/icons/JsIcon";
 
 interface HeaderProps {
   subject?: string;
@@ -26,8 +29,17 @@ export const Header = ({ subject, theme }: HeaderProps) => {
             <HtmlIcon />
           ) : subject === "accessibility" ? (
             <AccesIcon />
+          ) : subject === "css" ? (
+            <CssIcon />
+          ) : subject === "javascript" ? (
+            <JsIcon />
           ) : null}
-          <Text   color={theme === false ? "brand.navy" : undefined}  ml={4} fontWeight="bold" fontSize={{base:"24px",lg:'28px'}}>
+          <Text
+            color={theme === false ? "brand.navy" : undefined}
+            ml={4}
+            fontWeight="bold"
+            fontSize={{ base: "24px", lg: "28px" }}
+          >
             {subject.charAt(0).toUpperCase() + subject.slice(1)}
           </Text>
         </Flex>
