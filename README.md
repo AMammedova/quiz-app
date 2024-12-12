@@ -15,7 +15,7 @@ A responsive web application that allows users to test their frontend knowledge 
 ## Installation
 1. Clone the repository:
    ```bash
-   git clone https://github.com/username/repository-name.git
+   git clone https://github.com/AMammedova/quiz-app.git
    cd repository-name
 npm install
 npm run dev
